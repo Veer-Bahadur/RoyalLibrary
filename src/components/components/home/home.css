@@ -1,0 +1,37 @@
+/* StudentList.css */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.student-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: calc(
+    100vh / 3
+  ); /* Each row's max height is one-third of the viewport height */
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+.student-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Adjust width to fit content nicely */
+  max-height: 100%; /* Ensure the card does not exceed the row height */
+  overflow: auto; /* Add scroll if content exceeds card height */
+}
+
+.student-card h3 {
+  margin-top: 0;
+}
+
+.student-card p {
+  margin: 0.5rem 0;
+}

@@ -1,0 +1,65 @@
+/* EnrollmentForm.css */
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, textarea, select, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px; /* Adjust height as needed */
+}
+
+button {
+  background-color: #5cc77a;
+  margin-top: 50px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  grid-column: span 2; /* Make button span across 2 columns */
+}
+
+button:hover {
+  background-color: #045f2e;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  form {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  button {
+    grid-column: span 1; /* Reset button span to 1 column on smaller screens */
+  }
+}
