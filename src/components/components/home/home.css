@@ -1,18 +1,27 @@
 /* StudentList.css */
+.student-list-container {
+  padding: 1rem;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
 .student-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
 }
 
 .student-row {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-height: calc(
-    100vh / 3
-  ); /* Each row's max height is one-third of the viewport height */
+  max-height: calc(100vh / 3); /* Each row's max height is one-third of the viewport height */
   overflow: auto;
   margin-bottom: 1rem;
 }
