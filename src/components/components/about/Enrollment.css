@@ -16,7 +16,7 @@ form {
   gap: 1rem;
 }
 
-div {
+.div {
   display: flex;
   flex-direction: column;
 }
@@ -26,7 +26,7 @@ label {
   font-weight: bold;
 }
 
-input, textarea, select, button {
+input, textarea, select, .button {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -38,7 +38,7 @@ textarea {
   height: 100px; /* Adjust height as needed */
 }
 
-button {
+.button {
   background-color: #5cc77a;
   margin-top: 50px;
   width: 100px;
@@ -48,7 +48,7 @@ button {
   grid-column: span 2; /* Make button span across 2 columns */
 }
 
-button:hover {
+.button:hover {
   background-color: #045f2e;
 }
 
@@ -59,7 +59,7 @@ button:hover {
     grid-template-columns: 1fr;
   }
   
-  button {
+  .button {
     grid-column: span 1; /* Reset button span to 1 column on smaller screens */
   }
 }
