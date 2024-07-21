@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import server from "../services/server.tsx"
 import { useStore } from '../../../Store'
 import Navbar from '../navbar/navbar'
 import "./home.css"
@@ -10,7 +11,7 @@ const Home = () => {
     useEffect(() => {
         const fetchStudents = async () => {
             try {
-                const response = await fetch('http://localhost:8000/getAllStudents');
+                const response = await fetch(`${server.server}/getAllStudents`);
                 const data = await response.json();
                 console.log(data);
                 setStudents(data.data);
@@ -26,7 +27,7 @@ const Home = () => {
     };
 
     const filteredStudents = students.filter(student =>
-        student.enrollmentNo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        student.enrollmentNo.toLowerCase()===searchTerm.toLowerCase() ||
         student.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         student.seatNo?.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -46,6 +47,8 @@ const Home = () => {
                         <div className="student-card">
                             <h3>{student.studentName}</h3>
                             <p>Enrollment No: {student.enrollmentNo}</p>
+                            <p>Batch Timing: {student.batchTiming}</p>
+                            <p>Seat No: {student.seatNo}</p>
                             <p>Date of Enrollment: {new Date(student.dateOfEnrollment).toLocaleDateString()}</p>
                             <p>Date of Birth: {new Date(student.dateOfBirth).toLocaleDateString()}</p>
                             <p>Mother's Name: {student.motherName}</p>
@@ -55,8 +58,6 @@ const Home = () => {
                             <p>Mobile No: {student.mobileNo}</p>
                             <p>Email ID: {student.emailId}</p>
                             <p>Monthly Fee: {student.monthlyFee}</p>
-                            <p>Batch Timing: {student.batchTiming}</p>
-                            <p>Seat No: {student.seatNo}</p>
                         </div>
                     </div>
                 ))}
