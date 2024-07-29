@@ -5,6 +5,7 @@ import Home from "./components/components/home/Home";
 import AddStudent from "./components/components/about/AddStudent";
 import Navbar from "./components/components/navbar/navbar";
 import SeatAllocation from "./components/components/seats/SeatAllocation";
+import Fees from "./components/components/fees/Fees";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" Component={Home} />
           <Route path="/addStudent" Component={AddStudent} />
           <Route path="/seatAllocation" Component={SeatAllocation} />
+          <Route path="/fees" Component={Fees} />
         </Routes>
       </Store>
     </BrowserRouter>

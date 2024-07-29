@@ -47,7 +47,7 @@ const Home = () => {
             <div className="cards-container">
                 {filteredStudents.map(student => (
                     <div>
-                        <Card photo={pic} studentName={student.studentName} enrollmentNo={student.enrollmentNo} seatNo={student.seatNo} shift={student.batchTiming}/>
+                        <Card photo={pic} studentName={student.studentName} enrollmentNo={student.enrollmentNo} seatNo={student.seatNo} shift={student.batchTiming} student={student}/>
                     </div>
                     
                 ))}

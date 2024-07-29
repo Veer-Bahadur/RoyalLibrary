@@ -11,6 +11,7 @@ const Navbar = () => {
                 <li><a href="/">View All</a></li>
                 <li><a href="/addStudent">Add Student</a></li>
                 <li><a href="/seatAllocation">Seat Allocation</a></li>
+                <li><a href="/fees">Fees</a></li>
                 <li><a href="/contact">Login</a></li>
             </ul>
         </nav>
